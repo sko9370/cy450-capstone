@@ -5,7 +5,7 @@
 echo " run updates and upgrade? [Y/n]"
 read answer
 
-if [ "$answer" = "y" ] ; then
+if [ $answer = "y" ]; then
 	echo "  update and upgrade"
 	sudo apt update
 	sudo apt upgrade
@@ -36,8 +36,7 @@ echo
 
 ## firewall configurations
 
-# check it's on
-sudo ufw enable
+sh firewall.sh
 
 ## check crontab (lab 3)
 
@@ -45,6 +44,15 @@ sudo ufw enable
 
 ## check running services
 ## stop and disable!
+
+sh stopDisable.sh
+
+## delete residual ssh keys
+
+read username
+sudo rm -rf /home/$username/.ssh
+sudo rm -rf /home/$username/nosshlogin
+
 ## follow logs (lab 2)
 # /var/log/auth.log
 # /var/log/syslog
