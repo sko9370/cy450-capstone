@@ -1,0 +1,19 @@
+zone "communications.cy450" {
+	type master;
+	file "/var/cache/bind/forward.communications.cy450";
+	allow-transfer { 10.82.2.130; };
+	also-notify { 10.82.2.130; };
+};
+
+zone "2.82.10.in-addr.arpa" {
+	type master;
+	file "/var/cache/bind/reverse.communications.cy450";
+	allow-transfer { 10.82.2.130; };
+	also-notify { 10.82.2.130; };
+};
+
+zone "int-communications.cy450" {
+	type master;
+	file "/var/cache/bind/forward.int-communications.cy450";
+	allow-transfer { none; };
+};

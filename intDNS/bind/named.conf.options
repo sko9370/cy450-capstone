@@ -1,0 +1,17 @@
+acl "trusted" { 10.82.2.0/24; localhost; };
+
+options {
+	directory "/var/cache/bind";
+
+	forwarders { 10.82.2.130; };
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on { any; };
+	recursion yes;
+
+	allow-recursion { "trusted"; };
+	allow-query-cache { "trusted"; };
+	allow-transfer { none; };
+
+	allow-query { "trusted"; }; # special to internal server
+};
+

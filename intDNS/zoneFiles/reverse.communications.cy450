@@ -1,0 +1,13 @@
+$TTL	86400
+@	IN	SOA	ns1.communications.cy450. admin.communications.cy450. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			  86400 )	; Negative Cache TTL
+;
+@	IN	NS	ns1.communications.cy450.
+
+130	IN	PTR	ns1.communications.cy450.
+140	IN	PTR	web.communications.cy450.
+254	IN	PTR	router.communications.cy450.

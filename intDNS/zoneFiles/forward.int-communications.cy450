@@ -1,0 +1,17 @@
+$TTL	86400
+@	IN	SOA	ns2.int-communications.cy450. admin.int-communications.cy450. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			  86400 )	; Negative Cache TTL
+;
+@	IN	NS	ns2.int-communications.cy450.
+
+user	IN	A	10.82.2.2
+ns2	IN	A	10.82.2.5
+db	IN	A	10.82.2.10
+
+mac	IN	CNAME	client
+davis	IN	CNAME	ns2
+scott	IN	CNAME	db

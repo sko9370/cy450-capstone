@@ -1,0 +1,2 @@
+1. increment 'serial' in zone file you are editing # may not be necessary?? if host -la to pull zone file
+2. restart bind
